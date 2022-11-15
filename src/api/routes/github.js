@@ -130,7 +130,7 @@ githubRouter.get(
 	}
 );
 
-githubRouter.get(
+githubRouter.post(
 	"/readmes",
 	auth({
 		dontRespond: true,
