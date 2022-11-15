@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Web",
+        "description": "Web based projects",
+        "color": "#47d159"
+    },
+    {
+        "name": "Games",
+        "description": "Game projects",
+        "color": "#eb4034"
+    },
+    {
+        "name": "JS",
+        "description": "Projects written in javascript",
+        "color": "#f7df1e"
+    },
+    {
+        "name": "TS",
+        "description": "Projects written in typescript",
+        "color": "#007acc"
+    }
+]
