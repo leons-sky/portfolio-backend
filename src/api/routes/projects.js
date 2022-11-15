@@ -158,7 +158,15 @@ projectsRouter.post(
 			project.setCategory(category);
 			res.send(project);
 		} catch (err) {
-			res.send(err);
+			if (err.name && err.name.includes("Sequelize")) {
+				// if (err.errors.filter(e => e.message == "PRIMARY must be unique").length > 0) {
+				// 	return res.status(400).send("A category with that name already exists")
+				// }
+				return res
+					.status(500)
+					.send(`Sequelize error (${err.name}): ${err.errors}`);
+			}
+			res.status(500).send(err);
 		}
 	}
 );
